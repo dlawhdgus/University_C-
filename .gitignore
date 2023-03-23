@@ -3,3 +3,6 @@ hello.dSYM
 hello
 basic.dSYM
 example.dSYM
+loop
+loop_do_while
+loop_while
