@@ -1,3 +1,5 @@
+//생성자는 리턴값이 없음
+
 #include <iostream>
 using namespace std;
 
