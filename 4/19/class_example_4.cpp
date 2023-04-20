@@ -38,9 +38,18 @@ double Circle::getArea() {
     return 3.14*radius*radius;
 };
 
+//실행 순서 : 전역 -> 지역
+void f () {
+    Circle Fdonut(100);
+    Circle Fpizza(300);
+};
+
 int main() {
     Circle donut;
     Circle pizza(30);
-
+    f();
     return 0;
 };
+
+Circle globaldonut(1000);
+Circle globalpizza(2000);
