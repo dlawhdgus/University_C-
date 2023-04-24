@@ -12,3 +12,5 @@ int main() {
     area = pizza.getArea();
     cout << "피자 면적은" << area << endl;
 }
+
+//g++ -o main main.cpp cal.cpp cal_run.cpp <- main이라는 실행기로 합치겠다.
