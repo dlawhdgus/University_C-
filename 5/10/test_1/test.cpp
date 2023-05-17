@@ -31,6 +31,8 @@ int main() {
         if(upperalpha[i] != 0) { cout << (char)(i+65) << " : " << upperalpha[cnt] << endl; }
         if(loweralpha[i] != 0) { cout << (char)(i+97) << " : " << loweralpha[cnt] << endl; }
     }
+
+    //대소문자 따로 출력
 }
 
 
