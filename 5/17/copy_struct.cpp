@@ -2,7 +2,8 @@
 using namespace std;
 class Circle { 
 private:
-    int radius; public:
+    int radius; 
+public:
     Circle(const Circle& c); // 복사 생성자 선언
     Circle() { radius = 1; }
     Circle(int radius) { this->radius = radius; } 
