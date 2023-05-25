@@ -1,40 +1,39 @@
 #include <iostream>
 #include <string>
-#include <cctype>
 using namespace std;
 
 int upperalpha[26] = {};
 int loweralpha[26] = {};
-int cnt;
 
 int main() {
     string input;
-    cout << "문자열 입력 : ";
+    cout << "문자열 입력: ";
     getline(cin, input);
 
-    string sentence;
+    for (int i = 0; i < input.length(); i++) {
+        if (input[i] == ' ') {
+            continue;
+        }
 
-
-    for(int i=0; i<input.length(); i++) {
-        if(isalpha(input[i])) { sentence += input[i]; }
-
-        if(((int)sentence[i] >= 65 ) && ((int)sentence[i] >= 97)) {
-            cnt = (int)sentence[i]-97;
-            loweralpha[cnt] += 1;
-        } else {
-            cnt = (int)sentence[i]-65;
-            upperalpha[cnt] += 1;
+        if (isalpha(input[i])) {
+            if (islower(input[i])) {
+                int cnt = input[i] - 'a';
+                loweralpha[cnt] += 1;
+            } else if (isupper(input[i])) {
+                int cnt = input[i] - 'A';
+                upperalpha[cnt] += 1;
+            }
         }
     }
 
-    for(int i=0; i<26; i++) {
-        if(upperalpha[i] != 0) { cout << (char)(i+65) << " : " << upperalpha[cnt] << endl; }
-        if(loweralpha[i] != 0) { cout << (char)(i+97) << " : " << loweralpha[cnt] << endl; }
+    for (int i = 0; i < 26; i++) {
+        if (upperalpha[i] != 0) {
+            cout << static_cast<char>('A' + i) << " : " << upperalpha[i] << endl;
+        }
+        if (loweralpha[i] != 0) {
+            cout << static_cast<char>('a' + i) << " : " << loweralpha[i] << endl;
+        }
     }
 
-    //대소문자 따로 출력
+    return 0;
 }
-
-
-
-//순서 문자열 입력 --> 알파벳 필터 --> a,b,c 대소문자 개수 따로 출력
