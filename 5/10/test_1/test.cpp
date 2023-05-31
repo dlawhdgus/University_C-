@@ -25,11 +25,14 @@ int main() {
             }
         }
     }
-
+    cout << "대문자" << endl;
     for (int i = 0; i < 26; i++) {
         if (upperalpha[i] != 0) {
             cout << static_cast<char>('A' + i) << " : " << upperalpha[i] << endl;
         }
+    }
+    cout << "소문자" << endl;
+    for (int i = 0; i < 26; i++) {
         if (loweralpha[i] != 0) {
             cout << static_cast<char>('a' + i) << " : " << loweralpha[i] << endl;
         }
