@@ -30,3 +30,7 @@ reference-example
 copy_struct
 func_overload
 reference
+constructor
+inheritance
+multi_inheritance
+protected
